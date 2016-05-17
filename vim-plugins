@@ -1,0 +1,5 @@
+pathogen
+nerdtree
+syntastic
+vim-airline
+vim-fugitive
