@@ -12,5 +12,6 @@ cd -
 ln -s $PWD/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-xdg-open PowerlineSymbols.otf 
+mkdir ~/.fonts
+mv PowerlineSymbols.otf ~/.fonts/
 
