@@ -173,6 +173,7 @@ nnoremap <SPACE>gs :Gstatus<CR>
 nnoremap <SPACE>gc :Gcommit<CR>
 nnoremap <SPACE>gb :Gblame<CR>
 nnoremap <SPACE>gl :Git lola<CR>
+nnoremap <SPACE>gp :grep '\b<cword>\b' -r .<CR>
 
 " copy whole text
 function! XClip()
@@ -186,6 +187,10 @@ nnoremap <Tab>j <C-W>j
 nnoremap <Tab>k <C-W>k
 nnoremap <Tab>h <C-W>h
 nnoremap <Tab>l <C-W>l
+nnoremap <Tab>J <C-W>J
+nnoremap <Tab>K <C-W>K
+nnoremap <Tab>H <C-W>H
+nnoremap <Tab>L <C-W>L
 
 " Delete trailing spaces
 nnoremap <Leader>d :%s/\s\{1,\}$//<cr>
