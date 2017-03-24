@@ -182,13 +182,20 @@ endfunction
 nnoremap <SPACE>c :call XClip()<CR><SPACE>:echo 'File copied'<CR>
 
 " window navigation
-nnoremap <Tab>j <C-W>j
-nnoremap <Tab>k <C-W>k
-nnoremap <Tab>h <C-W>h
-nnoremap <Tab>l <C-W>l
+nnoremap <Space>j <C-W>j
+nnoremap <Space>k <C-W>k
+nnoremap <Space>h <C-W>h
+nnoremap <Space>l <C-W>l
+nnoremap <Space>J <C-W>J
+nnoremap <Space>K <C-W>K
+nnoremap <Space>H <C-W>H
+nnoremap <Space>L <C-W>L
 
 " Delete trailing spaces
 nnoremap <Leader>d :%s/\s\{1,\}$//<cr>
+
+" start spell check
+nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 
 " automatic set to paste mode
 let &t_SI .= "\<Esc>[?2004h"
@@ -225,6 +232,12 @@ let g:airline_powerline_fonts=1
 " syntastic configuration
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pyflakes']
+
+" templates
+let g:file_template_default = {}
+let g:file_template_default['py'] = 'python_header'
+nnoremap <Leader>h :LoadFileTemplate<CR>
 
 "------------------------------------------------------------
 " For vimsuite
