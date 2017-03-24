@@ -173,6 +173,7 @@ nnoremap <SPACE>gs :Gstatus<CR>
 nnoremap <SPACE>gc :Gcommit<CR>
 nnoremap <SPACE>gb :Gblame<CR>
 nnoremap <SPACE>gl :Git lola<CR>
+nnoremap <SPACE>gp :grep '\b<cword>\b' -r .<CR>
 
 " copy whole text
 function! XClip()
