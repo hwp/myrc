@@ -161,6 +161,9 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 " Maps
 inoremap jk <ESC>
+inoremap JK <ESC>
+inoremap Jk <ESC>
+inoremap jK <ESC>
 
 nnoremap <SPACE><SPACE> :w<CR>
 nnoremap <SPACE>q :q<CR>
@@ -238,6 +241,7 @@ let g:syntastic_python_checkers = ['pyflakes']
 " templates
 let g:file_template_default = {}
 let g:file_template_default['py'] = 'python_header'
+let g:file_template_default['tex'] = 'tex_article'
 nnoremap <Leader>h :LoadFileTemplate<CR>
 
 "------------------------------------------------------------
