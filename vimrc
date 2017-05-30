@@ -200,6 +200,7 @@ nnoremap <Leader>d :%s/\s\{1,\}$//<cr>
 
 " start spell check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
+nnoremap <Space>s ]s
 
 " automatic set to paste mode
 let &t_SI .= "\<Esc>[?2004h"
