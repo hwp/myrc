@@ -8,7 +8,7 @@
 " Customized: for Weipeng He
 
 "------------------------------------------------------------
-" Features 
+" Features
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
@@ -27,7 +27,7 @@ syntax on
 
 
 "------------------------------------------------------------
-" Must have options 
+" Must have options
 "
 " These are highly recommended options.
 
@@ -69,7 +69,7 @@ set hlsearch
 
 
 "------------------------------------------------------------
-" Usability options 
+" Usability options
 "
 " These are options that users frequently set in their .vimrc. Some of them
 " change Vim's behaviour in ways which deviate from the true Vi way, but
@@ -126,7 +126,7 @@ set notimeout ttimeout ttimeoutlen=200
 
 
 "------------------------------------------------------------
-" Indentation options 
+" Indentation options
 "
 " Indentation settings according to personal preference.
 
@@ -143,7 +143,7 @@ set tabstop=2
 
 
 "------------------------------------------------------------
-" Mappings 
+" Mappings
 "
 " Useful mappings
 
@@ -201,6 +201,9 @@ nnoremap <Leader>d :%s/\s\{1,\}$//<cr>
 " start spell check
 nnoremap <Leader>sp :set spell spelllang=en_us<CR>
 nnoremap <Space>s ]s
+
+" diable Q (ex mode)
+nnoremap Q <nop>
 
 " automatic set to paste mode
 let &t_SI .= "\<Esc>[?2004h"
