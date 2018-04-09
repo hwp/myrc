@@ -205,6 +205,9 @@ nnoremap <Space>s ]s
 " diable Q (ex mode)
 nnoremap Q <nop>
 
+" show linewrap
+set showbreak=↪
+
 " automatic set to paste mode
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
