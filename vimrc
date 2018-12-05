@@ -169,7 +169,7 @@ nnoremap <SPACE><SPACE> :w<CR>
 nnoremap <SPACE>q :q<CR>
 nnoremap <SPACE>n :cn<CR>
 nnoremap <SPACE>p :cp<CR>
-nnoremap <SPACE>t :NERDTreeToggle<CR>
+nnoremap <SPACE>T :NERDTreeToggle<CR>
 nnoremap <SPACE>ga :Gwrite<CR>
 nnoremap <SPACE>gd :Gdiff<CR>
 nnoremap <SPACE>gs :Gstatus<CR>
@@ -194,6 +194,14 @@ nnoremap <SPACE>J <C-W>J
 nnoremap <SPACE>K <C-W>K
 nnoremap <SPACE>H <C-W>H
 nnoremap <SPACE>L <C-W>L
+
+" tabs manipulation
+nnoremap <SPACE>t :tabnew<cr>
+nnoremap <SPACE>1 :tabnext 1<cr>
+nnoremap <SPACE>2 :tabnext 2<cr>
+nnoremap <SPACE>3 :tabnext 3<cr>
+nnoremap <SPACE>4 :tabnext 4<cr>
+nnoremap <SPACE>5 :tabnext 5<cr>
 
 " Delete trailing spaces
 nnoremap <LEADER>d :%s/\s\{1,\}$//<cr>
