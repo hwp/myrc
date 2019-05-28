@@ -169,7 +169,7 @@ nnoremap <SPACE><SPACE> :w<CR>
 nnoremap <SPACE>q :q<CR>
 nnoremap <SPACE>n :cn<CR>
 nnoremap <SPACE>p :cp<CR>
-nnoremap <SPACE>t :NERDTreeToggle<CR>
+nnoremap <SPACE>T :NERDTreeToggle<CR>
 nnoremap <SPACE>ga :Gwrite<CR>
 nnoremap <SPACE>gd :Gdiff<CR>
 nnoremap <SPACE>gs :Gstatus<CR>
@@ -186,24 +186,39 @@ endfunction
 nnoremap <SPACE>c :call XClip()<CR><SPACE>:echo 'File copied'<CR>
 
 " window navigation
-nnoremap <Space>j <C-W>j
-nnoremap <Space>k <C-W>k
-nnoremap <Space>h <C-W>h
-nnoremap <Space>l <C-W>l
-nnoremap <Space>J <C-W>J
-nnoremap <Space>K <C-W>K
-nnoremap <Space>H <C-W>H
-nnoremap <Space>L <C-W>L
+nnoremap <SPACE>j <C-W>j
+nnoremap <SPACE>k <C-W>k
+nnoremap <SPACE>h <C-W>h
+nnoremap <SPACE>l <C-W>l
+nnoremap <SPACE>J <C-W>J
+nnoremap <SPACE>K <C-W>K
+nnoremap <SPACE>H <C-W>H
+nnoremap <SPACE>L <C-W>L
+
+" tabs manipulation
+nnoremap <SPACE>t :tabnew<cr>
+nnoremap <SPACE>1 :tabnext 1<cr>
+nnoremap <SPACE>2 :tabnext 2<cr>
+nnoremap <SPACE>3 :tabnext 3<cr>
+nnoremap <SPACE>4 :tabnext 4<cr>
+nnoremap <SPACE>5 :tabnext 5<cr>
 
 " Delete trailing spaces
-nnoremap <Leader>d :%s/\s\{1,\}$//<cr>
+nnoremap <LEADER>d :%s/\s\{1,\}$//<cr>
 
 " start spell check
-nnoremap <Leader>sp :set spell spelllang=en_us<CR>
-nnoremap <Space>s ]s
+nnoremap <LEADER>sp :set spell spelllang=en_us<CR>
+nnoremap <SPACE>s ]s
+
+" replace word under cursor
+nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
+nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 
 " diable Q (ex mode)
 nnoremap Q <nop>
+
+" show linewrap
+set showbreak=↪
 
 " automatic set to paste mode
 let &t_SI .= "\<Esc>[?2004h"
@@ -246,7 +261,7 @@ let g:syntastic_python_checkers = ['pyflakes', 'flake8']
 let g:file_template_default = {}
 let g:file_template_default['py'] = 'python_header'
 let g:file_template_default['tex'] = 'tex_article'
-nnoremap <Leader>h :LoadFileTemplate<CR>
+nnoremap <LEADER>h :LoadFileTemplate<CR>
 
 "------------------------------------------------------------
 " For vimsuite
