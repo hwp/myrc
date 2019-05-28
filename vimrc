@@ -240,7 +240,7 @@ let g:airline_powerline_fonts=1
 " syntastic configuration
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['pyflakes', 'flake8']
 
 " templates
 let g:file_template_default = {}
