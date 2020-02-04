@@ -202,6 +202,11 @@ nnoremap <SPACE>2 :tabnext 2<cr>
 nnoremap <SPACE>3 :tabnext 3<cr>
 nnoremap <SPACE>4 :tabnext 4<cr>
 nnoremap <SPACE>5 :tabnext 5<cr>
+nnoremap <SPACE>6 :tabnext 6<cr>
+nnoremap <SPACE>7 :tabnext 7<cr>
+nnoremap <SPACE>8 :tabnext 8<cr>
+nnoremap <SPACE>9 :tabnext 9<cr>
+nnoremap <SPACE>0 :tabnext 10<cr>
 
 " Delete trailing spaces
 nnoremap <LEADER>d :%s/\s\{1,\}$//<cr>
