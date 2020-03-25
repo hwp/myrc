@@ -195,21 +195,25 @@ nnoremap <SPACE>K <C-W>K
 nnoremap <SPACE>H <C-W>H
 nnoremap <SPACE>L <C-W>L
 
+" window split
+nnoremap <SPACE>sv :vsplit<CR>
+nnoremap <SPACE>sh :split<CR>
+
 " tabs manipulation
-nnoremap <SPACE>t :tabnew<cr>
-nnoremap <SPACE>1 :tabnext 1<cr>
-nnoremap <SPACE>2 :tabnext 2<cr>
-nnoremap <SPACE>3 :tabnext 3<cr>
-nnoremap <SPACE>4 :tabnext 4<cr>
-nnoremap <SPACE>5 :tabnext 5<cr>
-nnoremap <SPACE>6 :tabnext 6<cr>
-nnoremap <SPACE>7 :tabnext 7<cr>
-nnoremap <SPACE>8 :tabnext 8<cr>
-nnoremap <SPACE>9 :tabnext 9<cr>
-nnoremap <SPACE>0 :tabnext 10<cr>
+nnoremap <SPACE>t :tabnew<CR>
+nnoremap <SPACE>1 :tabnext 1<CR>
+nnoremap <SPACE>2 :tabnext 2<CR>
+nnoremap <SPACE>3 :tabnext 3<CR>
+nnoremap <SPACE>4 :tabnext 4<CR>
+nnoremap <SPACE>5 :tabnext 5<CR>
+nnoremap <SPACE>6 :tabnext 6<CR>
+nnoremap <SPACE>7 :tabnext 7<CR>
+nnoremap <SPACE>8 :tabnext 8<CR>
+nnoremap <SPACE>9 :tabnext 9<CR>
+nnoremap <SPACE>0 :tabnext 10<CR>
 
 " Delete trailing spaces
-nnoremap <LEADER>d :%s/\s\{1,\}$//<cr>
+nnoremap <LEADER>d :%s/\s\{1,\}$//<CR>
 
 " start spell check
 nnoremap <LEADER>sp :set spell spelllang=en_us<CR>
