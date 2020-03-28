@@ -266,11 +266,18 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pyflakes', 'flake8']
 
+" auto format
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:formatters_python = ['yapf', 'autopep8', 'black']
+nnoremap <LEADER>f :Autoformat<CR>
+
 " templates
 let g:file_template_default = {}
 let g:file_template_default['py'] = 'python_header'
 let g:file_template_default['tex'] = 'tex_article'
 nnoremap <LEADER>h :LoadFileTemplate<CR>
+
 
 "------------------------------------------------------------
 " For vimsuite
