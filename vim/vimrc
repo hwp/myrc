@@ -1,6 +1,6 @@
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-"          Weipeng He <heweipeng>
+"          Weipeng He <heweipeng@gmail.com>
 " Description: A minimal, but feature rich, example .vimrc. If you are a
 "              newbie, basing your first .vimrc on this file is a good choice.
 "              If you're a more advanced user, building your own .vimrc based
@@ -217,26 +217,27 @@ nnoremap <LEADER>d :%s/\s\{1,\}$//<CR>
 
 " start spell check
 nnoremap <LEADER>sp :set spell spelllang=en_us<CR>
+nnoremap <LEADER>ns :set nospell<CR>
 nnoremap <SPACE>s ]s
 
 " replace word under cursor
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 
-" diable Q (ex mode)
+" disable Q (ex mode)
 nnoremap Q <nop>
 
-" show linewrap
+" show line-wrap
 set showbreak=↪
 
 " automatic set to paste mode
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
+let &t_SI .= "\<ESC>[?2004h"
+let &t_EI .= "\<ESC>[?2004l"
 
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+inoremap <SPECIAL> <EXPR> <ESC>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
+  set pastetoggle=<ESC>[201~
   set paste
   return ""
 endfunction
@@ -267,10 +268,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pyflakes', 'flake8']
 
 " auto format
+let g:autoformat_verbosemode = 1
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:formatters_python = ['yapf', 'autopep8', 'black']
-nnoremap <LEADER>f :Autoformat<CR>
+nnoremap <LEADER>ft :Autoformat<CR>
 
 " templates
 let g:file_template_default = {}

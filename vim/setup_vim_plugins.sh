@@ -21,20 +21,32 @@ ln -fs $SRC_DIR/vimrc $HOME/.vimrc &&
 >&2 echo 'create links : autoload' &&
 mkdir -p $HOME/.vim/autoload &&
 for x in autoload/*
-do 
+do
   ln -fs "$SRC_DIR/${x}" $HOME/.vim/autoload/ || exit 2
 done &&
 >&2 echo 'create links : bundle' &&
 mkdir -p $HOME/.vim/bundle &&
 for x in bundle/*
-do 
+do
   [ -d "$HOME/.vim/${x}" ] || ln -fs "$SRC_DIR/${x}" $HOME/.vim/bundle/ || exit 2
+done &&
+>&2 echo 'create links : plugin' &&
+mkdir -p $HOME/.vim/plugin &&
+for x in plugin/*
+do
+  ln -fs "$SRC_DIR/${x}" $HOME/.vim/plugin/ || exit 2
 done &&
 >&2 echo 'create links : ftplugin' &&
 mkdir -p $HOME/.vim/ftplugin &&
 for x in ftplugin/*
-do 
+do
   ln -fs "$SRC_DIR/${x}" $HOME/.vim/ftplugin/ || exit 2
+done &&
+>&2 echo 'create links : templates' &&
+mkdir -p $HOME/.vim/templates &&
+for x in templates/*
+do
+  ln -fs "$SRC_DIR/${x}" $HOME/.vim/templates/ || exit 2
 done &&
 >&2 echo 'create links : fonts' &&
 mkdir -p $HOME/.config/fontconfig/conf.d &&
@@ -42,3 +54,4 @@ ln -fs $SRC_DIR/fonts/10-powerline-symbols.conf $HOME/.config/fontconfig/conf.d/
 mkdir -p $HOME/.fonts &&
 ln -fs $SRC_DIR/fonts/PowerlineSymbols.otf $HOME/.fonts &&
 >&2 echo 'finished'
+>&2 echo 'other softwares : pyflakes yapf'
