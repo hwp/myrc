@@ -196,8 +196,8 @@ nnoremap <SPACE>H <C-W>H
 nnoremap <SPACE>L <C-W>L
 
 " window split
-nnoremap <SPACE>sv :vsplit<CR>
-nnoremap <SPACE>sh :split<CR>
+nnoremap <SPACE>vs :vsplit<CR>
+nnoremap <SPACE>hs :split<CR>
 
 " tabs manipulation
 nnoremap <SPACE>t :tabnew<CR>
