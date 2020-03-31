@@ -167,6 +167,7 @@ inoremap jK <ESC>
 
 nnoremap <SPACE><SPACE> :w<CR>
 nnoremap <SPACE>q :q<CR>
+nnoremap <LEADER>q :qall<CR>
 nnoremap <SPACE>n :cn<CR>
 nnoremap <SPACE>p :cp<CR>
 nnoremap <SPACE>T :NERDTreeToggle<CR>
