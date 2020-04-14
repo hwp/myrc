@@ -1,6 +1,6 @@
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-"          Weipeng He <heweipeng>
+"          Weipeng He <heweipeng@gmail.com>
 " Description: A minimal, but feature rich, example .vimrc. If you are a
 "              newbie, basing your first .vimrc on this file is a good choice.
 "              If you're a more advanced user, building your own .vimrc based
@@ -167,6 +167,7 @@ inoremap jK <ESC>
 
 nnoremap <SPACE><SPACE> :w<CR>
 nnoremap <SPACE>q :q<CR>
+nnoremap <LEADER>q :qall<CR>
 nnoremap <SPACE>n :cn<CR>
 nnoremap <SPACE>p :cp<CR>
 nnoremap <SPACE>T :NERDTreeToggle<CR>
@@ -195,19 +196,29 @@ nnoremap <SPACE>K <C-W>K
 nnoremap <SPACE>H <C-W>H
 nnoremap <SPACE>L <C-W>L
 
+" window split
+nnoremap <SPACE>vs :vsplit<CR>
+nnoremap <SPACE>hs :split<CR>
+
 " tabs manipulation
-nnoremap <SPACE>t :tabnew<cr>
-nnoremap <SPACE>1 :tabnext 1<cr>
-nnoremap <SPACE>2 :tabnext 2<cr>
-nnoremap <SPACE>3 :tabnext 3<cr>
-nnoremap <SPACE>4 :tabnext 4<cr>
-nnoremap <SPACE>5 :tabnext 5<cr>
+nnoremap <SPACE>t :tabnew<CR>
+nnoremap <SPACE>1 :tabnext 1<CR>
+nnoremap <SPACE>2 :tabnext 2<CR>
+nnoremap <SPACE>3 :tabnext 3<CR>
+nnoremap <SPACE>4 :tabnext 4<CR>
+nnoremap <SPACE>5 :tabnext 5<CR>
+nnoremap <SPACE>6 :tabnext 6<CR>
+nnoremap <SPACE>7 :tabnext 7<CR>
+nnoremap <SPACE>8 :tabnext 8<CR>
+nnoremap <SPACE>9 :tabnext 9<CR>
+nnoremap <SPACE>0 :tabnext 10<CR>
 
 " Delete trailing spaces
-nnoremap <LEADER>d :%s/\s\{1,\}$//<cr>
+nnoremap <LEADER>d :%s/\s\{1,\}$//<CR>
 
 " start spell check
 nnoremap <LEADER>sp :set spell spelllang=en_us<CR>
+nnoremap <LEADER>ns :set nospell<CR>
 nnoremap <SPACE>s ]s
 
 " replace word under cursor
@@ -217,20 +228,20 @@ nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 " make
 nnoremap <LEADER>m :make<CR>
 
-" diable Q (ex mode)
+" disable Q (ex mode)
 nnoremap Q <nop>
 
-" show linewrap
+" show line-wrap
 set showbreak=↪
 
 " automatic set to paste mode
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
+let &t_SI .= "\<ESC>[?2004h"
+let &t_EI .= "\<ESC>[?2004l"
 
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+inoremap <SPECIAL> <EXPR> <ESC>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
+  set pastetoggle=<ESC>[201~
   set paste
   return ""
 endfunction
@@ -258,13 +269,21 @@ let g:airline_powerline_fonts=1
 " syntastic configuration
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['pyflakes', 'flake8']
+
+" auto format
+let g:autoformat_verbosemode = 1
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:formatters_python = ['yapf', 'autopep8', 'black']
+nnoremap <LEADER>ft :Autoformat<CR>
 
 " templates
 let g:file_template_default = {}
 let g:file_template_default['py'] = 'python_header'
 let g:file_template_default['tex'] = 'tex_article'
 nnoremap <LEADER>h :LoadFileTemplate<CR>
+
 
 "------------------------------------------------------------
 " For vimsuite
