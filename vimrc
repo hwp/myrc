@@ -214,6 +214,9 @@ nnoremap <SPACE>s ]s
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 
+" make
+nnoremap <LEADER>m :make<CR>
+
 " diable Q (ex mode)
 nnoremap Q <nop>
 
@@ -281,4 +284,8 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 let g:Tex_DefaultTargetFormat='pdf'
+
+" Dont show quick fix
+let g:Tex_ShowErrorContext=0
+let g:Tex_GotoError=0
 
