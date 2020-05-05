@@ -232,16 +232,27 @@ nnoremap Q <nop>
 set showbreak=↪
 
 " automatic set to paste mode
-let &t_SI .= "\<ESC>[?2004h"
-let &t_EI .= "\<ESC>[?2004l"
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
 
-inoremap <SPECIAL> <EXPR> <ESC>[200~ XTermPasteBegin()
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+let &t_EI .= WrapForTmux("\<Esc>[?2004l")
 
 function! XTermPasteBegin()
-  set pastetoggle=<ESC>[201~
+  set pastetoggle=<Esc>[201~
   set paste
   return ""
 endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " for Pathogen
 execute pathogen#infect()
