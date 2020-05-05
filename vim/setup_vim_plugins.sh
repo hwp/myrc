@@ -1,5 +1,5 @@
 #!/bin/bash
-#pathogen nerdtree syntastic vim-airline vim-fugitive vim-autoformat vim-flake8
+#pathogen nerdtree syntastic vim-airline vim-fugitive vim-autoformat vim-flake8 vim-tex
 
 SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -14,6 +14,7 @@ wget -qc https://tpo.pe/pathogen.vim --directory-prefix=$SRC_DIR/autoload &&
 [ -d bundle/syntastic ]      || git clone -q git@github.com:scrooloose/syntastic.git    bundle/syntastic &&
 [ -d bundle/vim-autoformat ] || git clone -q git@github.com:Chiel92/vim-autoformat.git  bundle/vim-autoformat &&
 [ -d bundle/vim-flake8 ]     || git clone -q git@github.com:nvie/vim-flake8.git         bundle/vim-flake8 &&
+[ -d bundle/vim-tex ]        || git clone -q git@github.com:lervag/vimtex.git           bundle/vim-tex &&
 >&2 echo 'download fonts' &&
 wget -qc https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --directory-prefix=$SRC_DIR/fonts &&
 >&2 echo 'create links : vimrc' &&
