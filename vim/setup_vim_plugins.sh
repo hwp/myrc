@@ -16,6 +16,7 @@ wget -qc https://tpo.pe/pathogen.vim --directory-prefix=$SRC_DIR/autoload &&
 [ -d bundle/vim-flake8 ]     || git clone -q git@github.com:nvie/vim-flake8.git         bundle/vim-flake8 &&
 [ -d bundle/vim-tex ]        || git clone -q git@github.com:lervag/vimtex.git           bundle/vim-tex &&
 [ -d bundle/csv.vim ]        || git clone -q git@github.com:chrisbra/csv.vim.git        bundle/csv.vim &&
+[ -d bundle/jupytext.vim ]   || git clone -q git@github.com:goerz/jupytext.vim.git      bundle/jupytex.vim &&
 >&2 echo 'download fonts' &&
 wget -qc https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --directory-prefix=$SRC_DIR/fonts &&
 >&2 echo 'create links : vimrc' &&
