@@ -47,4 +47,4 @@
   helper = cache --timeout=3600
 
 [blame]
-  data = relative
+  date = relative
