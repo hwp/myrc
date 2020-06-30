@@ -283,6 +283,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pyflakes', 'flake8']
 let g:syntastic_tex_checkers = ['lacheck']
 
+" error highlight color
+hi SpellBad ctermbg=009
+
 " auto format
 let g:autoformat_verbosemode = 1
 let g:autoformat_autoindent = 0
