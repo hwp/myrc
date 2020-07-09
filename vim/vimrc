@@ -212,6 +212,7 @@ nnoremap <SPACE>7 :tabnext 7<CR>
 nnoremap <SPACE>8 :tabnext 8<CR>
 nnoremap <SPACE>9 :tabnext 9<CR>
 nnoremap <SPACE>0 :tabnext 10<CR>
+nnoremap <SPACE>f <C-W>gf
 
 " Delete trailing spaces
 nnoremap <LEADER>d :%s/\s\{1,\}$//<CR>
@@ -224,6 +225,8 @@ nnoremap <SPACE>s ]s
 " replace word under cursor
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
+nnoremap <SPACE>w  :let @w='<C-r><C-w>'<CR>
+xnoremap <SPACE>r  :s/\<<C-r>w\>/
 
 " make
 nnoremap <LEADER>m :make<CR>
