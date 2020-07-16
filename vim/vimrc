@@ -226,7 +226,7 @@ nnoremap <SPACE>s ]s
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 nnoremap <SPACE>w  :let @w='<C-r><C-w>'<CR>
-xnoremap <SPACE>r  :s/\<<C-r>w\>/
+xnoremap <SPACE>r  :s/<C-r>//
 
 " make
 nnoremap <LEADER>m :make<CR>
