@@ -222,11 +222,19 @@ nnoremap <LEADER>sp :set spell spelllang=en_us<CR>
 nnoremap <LEADER>ns :set nospell<CR>
 nnoremap <SPACE>s ]s
 
+" search visually selected text
+xnoremap // y/<C-R>=escape(@",'/\')<CR><CR>
+
+" replace visually selected text
+xnoremap <SPACE>ra y:%s/<C-R>=escape(@",'/\')<CR>/
+xnoremap <SPACE>rr y:s/<C-R>=escape(@",'/\')<CR>/
+
 " replace word under cursor
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
-nnoremap <SPACE>w  :let @w='<C-r><C-w>'<CR>
-xnoremap <SPACE>r  :s/<C-r>//
+
+" replace last searched word in visually selected text
+xnoremap <SPACE>r/  :s/<C-r>//
 
 " make
 nnoremap <LEADER>m :make<CR>
