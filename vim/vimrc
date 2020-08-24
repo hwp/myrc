@@ -233,7 +233,8 @@ xnoremap <SPACE>rr y:s/<C-R>=escape(@",'/\')<CR>/
 nnoremap <SPACE>rr :s/\<<C-r><C-w>\>/
 nnoremap <SPACE>ra :%s/\<<C-r><C-w>\>/
 
-" replace last searched word in visually selected text
+" replace last searched word
+nnoremap <SPACE>r/  :%s/<C-r>//
 xnoremap <SPACE>r/  :s/<C-r>//
 
 " make
@@ -302,6 +303,7 @@ let g:autoformat_verbosemode = 1
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:formatters_python = ['yapf', 'autopep8', 'black']
+let g:formatters_json = ['fixjson']
 nnoremap <LEADER>ft :Autoformat<CR>
 
 " templates
