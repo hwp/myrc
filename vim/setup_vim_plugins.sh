@@ -22,6 +22,8 @@ wget -qc https://tpo.pe/pathogen.vim --directory-prefix=$SRC_DIR/autoload &&
 wget -qc https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --directory-prefix=$SRC_DIR/fonts &&
 >&2 echo 'create links : vimrc' &&
 ln -fs $SRC_DIR/vimrc $HOME/.vimrc &&
+>&2 echo 'create links : filetype.vim' &&
+ln -fs $SRC_DIR/filetype.vim $HOME/.vim/filetype.vim &&
 >&2 echo 'create links : autoload' &&
 mkdir -p $HOME/.vim/autoload &&
 for x in autoload/*
