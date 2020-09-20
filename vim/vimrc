@@ -391,3 +391,8 @@ endfunction
 :hi! TabLine cterm=none ctermfg=8 ctermbg=7
 :hi! TabLineSel ctermfg=4 ctermbg=11
 :hi! TabLineFill ctermfg=8 ctermbg=0
+
+" fix strange character since vim 8.2
+" ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
+let &t_TI = ""
+let &t_TE = ""
