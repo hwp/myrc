@@ -396,3 +396,20 @@ endfunction
 " ref: https://stackoverflow.com/questions/62148994/strange-character-since-last-update-42m-in-vim
 let &t_TI = ""
 let &t_TE = ""
+
+" bash like file name auto-complete
+set wildmode=longest,list
+
+" ignore these files
+" compiled files
+set wildignore+=*.com,*.class,*.dll,*.exe,*.a,*.o,*.so,*.pyc,*.pyo,
+" images
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+" packages
+set wildignore+=*.7z,*.dmg,*.gz,*.iso,*.jar,*.rar,*.tar,*.zip
+" hidden files
+set wildignore+=.DS_Store,.git,.hg,.svn
+" cache files
+set wildignore+=*~,*.swp,*.tmp
+" other non-text files
+set wildignore+=*.pdf,*.ps
